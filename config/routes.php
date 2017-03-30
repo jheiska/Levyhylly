@@ -7,3 +7,7 @@
   $routes->get('/hiekkalaatikko', function() {
     HelloWorldController::sandbox();
   });
+  
+  $routes->get('/view_record', function() {
+  HelloWorldController::view_record();
+});
