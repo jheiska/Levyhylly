@@ -23,3 +23,7 @@ $routes->get('/record_list', function() {
 $routes->get('/record_find', function() {
     HelloWorldController::record_find();
 });
+
+$routes->get('/record', function() {
+    RecordController::index();
+});
