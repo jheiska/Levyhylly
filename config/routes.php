@@ -1,7 +1,7 @@
 <?php
 
 $routes->get('/', function() {
-    HelloWorldController::index();
+    RecordController::index();
 });
 
 $routes->get('/hiekkalaatikko', function() {
@@ -26,4 +26,12 @@ $routes->get('/record_find', function() {
 
 $routes->get('/record', function() {
     RecordController::index();
+});
+
+$routes->post('/record', function(){
+  RecordController::store();
+});
+
+$routes->get('/record/add', function(){
+  RecordController::create();
 });
