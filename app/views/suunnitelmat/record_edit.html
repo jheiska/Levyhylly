@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Edit record information</h1>
+
+  <form>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox">
+        In collection
+      </label>
+    </div>
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" value="Nightfall in Middle-Earth">
+    </div>
+    <div class="form-group">
+      <label>Artist</label>
+      <input type="text" class="form-control" value="Blind Guardian">
+    </div>
+      
+    <div class="form-group">
+      <label>Year published</label>
+      <input type="text" class="form-control" value="1998">
+    </div>
+        <div class="form-group">
+      <label>Keskeneräinen muokkausnäkymä</label>
+      <textarea class="form-control"> lisäksi pitäisi saada ennalta määrittelemätön 
+    määrä kenttiä, joiden avulla voidaan lisätä levyn henkilöstöä, tai mahdollisesti listaus henkilöstöstöstä ja "lisää henkilö" -nappi, 
+    jonka takaa aukeaa erillinen henkilön ja tämän tietojen lisäyssivu.
+      </textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Tallenna</button>
+    </div>
+  </form>
+{% endblock %}

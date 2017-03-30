@@ -1,21 +1,23 @@
+{% extends "base.html" %}
 {% block content %}
 <h1>Nightfall in Middle-Earth</h1>
 <!-- Painikkeet tähän -->
 <p>
-    <button class="btn btn-danger">Remove</button> <a href="#" class="btn btn-default">Edit</a>
+    <button class="btn btn-danger">Remove</button> <a href="../levyhylly/record_edit" class="btn btn-default">Edit</a>
 </p>
 <!-- Tiedot tulee listana tähän -->
 <ul>
+    <li><strong>Artist:</strong> Blind Guardian</li>
     <li><strong>Year published:</strong> 1998</li>    
-    <li><strong>In collection?:</strong> <label class="label label-danger">No</label></li>   
+    <li><strong>In collection?:</strong> <label class="label label-danger">Yes</label></li>   
 </ul>
 
- <table class="table-condensed">
+ <table class="table-bordered">
         <thead>
             <tr>
                 <th>Name</th>
                 <th>Roles</th>
-                <th>Guest appearance</th>
+                <th>Guest appearance?</th>
             </tr>
         </thead>
         <tbody>
@@ -27,22 +29,22 @@
             <tr>
                 <td>Hansi Kürsch</td>
                 <td>lead and backing vocals, producer</td>
-                <td>No</td>
+                <td></td>
             </tr>
             <tr>
                 <td>André Olbrich</td>
                 <td>lead, rhythm and acoustic guitars, producer</td>
-                <td>No</td>
+                <td></td>
             </tr>
             <tr>
                 <td>Marcus Siepen</td>
                 <td>rhythm guitars, producer</td>
-                <td>No</td>
+                <td></td>
             </tr>
             <tr>
                 <td>Thomas "Thomen" Stauch</td>
                 <td>drums & percussion, producer</td>
-                <td>No</td>
+                <td></td>
             </tr>
             <tr>
                 <td>Oliver Holzwarth</td>

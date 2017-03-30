@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>A list of records</h1>
+
+  <p>
+    <a href="../levyhylly/record_edit" class="btn btn-success">Add record</a>
+  </p>
+
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Artist</th>
+        <th>Year Released</th>
+        <th>In collection?</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+     
+      <tr>
+        <td><a href="#">Nightfall in Middle-Earth</a></td>
+        <td>Blind Guardian</td>
+        <td>1998</td>
+        <td>Yes</td>
+        <th><a class="btn btn-default btn-sm" href="../levyhylly/record_view">View additional information</a></th>
+        <th><a class="btn btn-default btn-sm" href="../levyhylly/record_edit">Edit</a></th>
+      </tr>
+      <tr>
+        <td><a href="#">Defending the Throne of Evil</a></td>
+        <td>Carpathian Forest</td>
+        <td>2003</td>
+        <td>Yes</td>
+        <th><a class="btn btn-default btn-sm" href="#">View additional information</a></th>
+        <th><a class="btn btn-default btn-sm" href="#">Edit</a></th>
+      </tr>
+    </tbody>
+  </table>
+{% endblock %}
