@@ -9,29 +9,29 @@ $routes->get('/hiekkalaatikko', function() {
 });
 
 $routes->get('/record_view', function() {
-    HelloWorldController::record_view();
+    RecordController::record_view();
 });
 
 $routes->get('/record_edit', function() {
-    HelloWorldController::record_edit();
+    RecordController::record_edit();
 });
 
 $routes->get('/record_list', function() {
-    HelloWorldController::record_list();
+    RecordController::record_list();
 });
 
 $routes->get('/record_find', function() {
-    HelloWorldController::record_find();
+    RecordController::record_find();
 });
 
 $routes->get('/record', function() {
     RecordController::index();
 });
 
-$routes->post('/record', function(){
+$routes->post('/record/add', function(){
   RecordController::store();
 });
 
-$routes->get('/record/add', function(){
-  RecordController::create();
-});
+//$routes->get('/record/add', function(){
+//  RecordController::create();
+//});
