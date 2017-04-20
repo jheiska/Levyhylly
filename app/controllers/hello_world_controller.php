@@ -16,7 +16,7 @@ class HelloWorldController extends BaseController {
 //    }
 
     public static function sandbox() {
-        $rec = new record(array(
+        $rec = new Record(array(
             'name' => '',
             'artist' => 'BG',
             'year' => '2018'            
