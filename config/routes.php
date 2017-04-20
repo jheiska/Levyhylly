@@ -29,7 +29,7 @@ $routes->get('/record', function() {
 });
 
 $routes->post('/record/add', function(){
-  RecordController::store();
+  RecordController::add();
 });
 
 //$routes->get('/record/add', function(){
