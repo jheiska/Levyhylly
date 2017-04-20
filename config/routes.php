@@ -8,10 +8,6 @@ $routes->get('/hiekkalaatikko', function() {
     HelloWorldController::sandbox();
 });
 
-$routes->get('/record_view', function($id) {
-    RecordController::record_view($id);
-});
-
 $routes->get('/record_edit', function($id) {
     RecordController::record_edit($id);
 });
