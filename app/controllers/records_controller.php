@@ -40,7 +40,7 @@ class RecordController extends BaseController {
 
     public static function record_view($id) {        
         $record = Record::find($id);
-        View::make('suunnitelmat/record_view.html', array('record' => $record));
+        View::make('suunnitelmat/record_view.html', $record);
     }
 
     public static function record_edit() {
