@@ -5,8 +5,6 @@ class BaseModel {
     // "protected"-attribuutti on käytössä vain luokan ja sen perivien luokkien sisällä
     protected $validators;
 
-   
-
     public function __construct($attributes = null) {
         // Käydään assosiaatiolistan avaimet läpi
         foreach ($attributes as $attribute => $value) {
@@ -35,7 +33,14 @@ class BaseModel {
         if ($this->name == '' || $this->name == null) {
             $errors[] = 'Name cannot be empty!';
         }
+        return $errors;
+    }
 
+    public function validate_year() {
+        $errors = array();
+        if (strlen($this->year) != 4) {
+            $errors[] = 'Julkaisuvuoden tulee olla muotoa YYYY (esim. 1998)!';
+        }
         return $errors;
     }
 

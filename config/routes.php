@@ -36,6 +36,6 @@ $routes->post('/record/store', function(){
   RecordController::store();
 });
 
-//$routes->get('/record/add', function(){
-//  RecordController::create();
-//});
+$routes->get('/record/:id', function($id){
+    RecordController::record_view($id);
+});

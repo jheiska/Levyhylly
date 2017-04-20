@@ -38,8 +38,8 @@ class RecordController extends BaseController {
         Redirect::to('/record/' . $record->id);
     }
 
-    public static function record_view() {
-        View::make('suunnitelmat/record_view.html');
+    public static function record_view($id) {        
+        View::make('suunnitelmat/record_view.html', $record = Record::find($id));
     }
 
     public static function record_edit() {
@@ -53,5 +53,7 @@ class RecordController extends BaseController {
     public static function record_find() {
         View::make('suunnitelmat/record_find.html');
     }
+    
+    public static function 
 
 }
