@@ -22,7 +22,7 @@ class RecordController extends BaseController {
         if (count($errors) == 0) {
             $record->save();
 
-            Redirect::to('/record/' . $game->id, array('message' => 'Record information added.'));
+            Redirect::to('/record/' . $record->id, array('message' => 'Record information added.'));
         } else {
             View::make('record/add.html', array('errors' => $errors, 'attributes' => $attributes));
         }
