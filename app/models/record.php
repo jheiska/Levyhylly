@@ -52,18 +52,17 @@ class Record extends BaseModel {
         $row = $query->fetch();
         $this->id = $row['id'];
     }
-    
+
     public function update() {
-        $query = DB::connection()->prepare('UPDATE Record SET name = :name, artist = :artist, year = :year RETURNING id');
-        $query->execute(array('name' => $this->name, 'artist' => $this->artist, 'year' => $this->year));      
+        $query = DB::connection()->prepare('UPDATE Record SET (name, artist, year) = (:name, :artist, :year) WHERE id = :id RETURNING id');
+        $query->execute(array('name' => $this->name, 'artist' => $this->artist, 'year' => $this->year, 'id' => $this->id));
         $row = $query->fetch();
         $this->id = $row['id'];
     }
-    
+
     public function destroy() {
         $query = DB::connection()->prepare('DELETE FROM Record WHERE id = :id');
         $query->execute(array('id' => $this->id));
     }
 
-    
 }
