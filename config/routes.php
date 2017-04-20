@@ -13,13 +13,12 @@ $routes->get('/:id/record_edit', function($id) {
 });
 
 $routes->post('/:id/edit_save', function($id) {
-    RecordController::record_edit($id);
+    RecordController::edit_save($id);
 });
 
 $routes->post('/:id/record_destroy', function($id) {
     RecordController::record_destroy($id);
 });
-
 
 $routes->get('/record_list', function() {
     RecordController::record_list();
