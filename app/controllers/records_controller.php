@@ -52,8 +52,6 @@ class RecordController extends BaseController {
 
     public static function record_find() {
         View::make('suunnitelmat/record_find.html');
-    }
-    
-    public static function 
+    }    
 
 }
