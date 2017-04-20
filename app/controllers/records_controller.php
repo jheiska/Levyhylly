@@ -40,12 +40,12 @@ class RecordController extends BaseController {
 
     public static function record_view($id) {
         $record = Record::find($id);
-        View::make('suunnitelmat/record_view.html', array('attributes' => $record));
+        View::make('record/record_view.html', array('attributes' => $record));
     }
 
     public static function record_edit($id) {
         $record = Record::find($id);
-        View::make('suunnitelmat/record_edit.html', array('attributes' => $record));
+        View::make('record/record_edit.html', array('attributes' => $record));
     }
 
     public static function edit_save($id) {
@@ -62,7 +62,7 @@ class RecordController extends BaseController {
         $errors = $record->errors();
 
         if (count($errors) > 0) {
-            View::make('record/edit.html', array('errors' => $errors, 'attributes' => $attributes));
+            View::make('record/record_edit.html', array('errors' => $errors, 'attributes' => $attributes));
         } else {
             $record->update($id);            
             Redirect::to('/record/' . $record->id, array('message' => 'Record information updated.'));
