@@ -73,7 +73,7 @@ class RecordController extends BaseController {
     public static function record_destroy($id){
         $record = new Record(array('id' => $id));
         $record->destroy();
-        Redirect::to('/records', array('message' => 'Record information removed from database.'));
+        Redirect::to('/record', array('message' => 'Record information removed from database.'));
     }
 
     public static function record_list() {
