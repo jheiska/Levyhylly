@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
   <h1>Add a record to the database</h1>
+  
+<!--  {% if errors %}
+    <div class="alert-info">
+      <ul>
+        {% for error in errors %}
+          <li>{{error}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}-->
 
   <form method="post" action="{{base_path}}/record">
     <div class="form-group">

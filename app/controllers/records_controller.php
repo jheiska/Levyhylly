@@ -8,14 +8,25 @@ class RecordController extends BaseController{
 
       public static function store(){    
         $params = $_POST;  
-        $record = new Record(array(
+        
+        $attributes = array(
         'name' => $params['name'],
         'artist' => $params['artist'],
         'year' => $params['year']        
-        ));
+        );
     
-        $record->save();    
-        Redirect::to('/record/' . $game->id, array('message' => 'Record information added.'));
+        $record = new Record($attributes);
+        $errors = $record->errors();
+        
+        if(count($errors) == 0){
+            $record->save();        
+            
+            Redirect::to('/record/' . $game->id, array('message' => 'Record information added.'));
+        }   else {
+             View::make('record/add.html', array('errors' => $errors, 'attributes' => $attributes));
+        }   
+        
+        
   }
   
     public static function seek(){
