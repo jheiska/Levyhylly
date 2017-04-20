@@ -8,9 +8,18 @@ $routes->get('/hiekkalaatikko', function() {
     HelloWorldController::sandbox();
 });
 
-$routes->get('/record_edit', function($id) {
+$routes->get('/:id/record_edit', function($id) {
     RecordController::record_edit($id);
 });
+
+$routes->post('/:id/edit_save', function($id) {
+    RecordController::record_edit($id);
+});
+
+$routes->post('/:id/record_destroy', function($id) {
+    RecordController::record_destroy($id);
+});
+
 
 $routes->get('/record_list', function() {
     RecordController::record_list();
