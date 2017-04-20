@@ -55,12 +55,12 @@ class Record extends BaseModel {
     
     public function update($id) {
         $query = DB::connection()->prepare('UPDATE Record SET name = :name, artist = :artist, year = :year WHERE id = :id');
-        $query->execute(array('id' => $id, 'name' => $this->name, 'artist' => $this->artist, 'year' => $this->year));      
+        $query->execute(array('id' => $this->id, 'name' => $this->name, 'artist' => $this->artist, 'year' => $this->year));      
     }
     
     public function destroy($id) {
         $query = DB::connection()->prepare('DELETE FROM Record WHERE id = :id');
-        $query->execute(array('id' => $id));
+        $query->execute(array('id' => $this->id));
     }
 
     
