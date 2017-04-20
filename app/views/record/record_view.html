@@ -1,9 +1,12 @@
 {% extends "base.html" %}
+{% import "macros/forms.html" as forms %}
 {% block content %}
 <h1>{{attributes[0].name}}</h1>
 
 <p>
-    <button class="btn btn-danger">Remove</button> <a href="../levyhylly/record_edit" class="btn btn-default">Edit</a>
+    
+     {{forms.destroy_button("#{base_path}/record/#{id}/record_destroy")}}
+<!--   <button class="btn btn-danger">Remove</button> <a href="../levyhylly/record_edit" class="btn btn-default">Edit</a>-->
 </p>
 
 <ul>
