@@ -64,7 +64,7 @@ class RecordController extends BaseController {
         if (count($errors) > 0) {
             View::make('record/record_edit.html', array('errors' => $errors, 'attributes' => $attributes));
         } else {
-            $record->update($id);            
+            $record->update();            
             Redirect::to('/record/' . $record->id, array('message' => 'Record information updated.'));
                        
         }
