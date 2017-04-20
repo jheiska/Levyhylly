@@ -54,7 +54,7 @@ class Record extends BaseModel {
     }
     
     public function update($id) {
-        $query = DB::connection()->prepare('UPDATE Record (name, artist, year) VALUES (:name, :artist, :year) WHERE id = :id RETURNING id');
+        $query = DB::connection()->prepare('UPDATE Record SET name = :name, artist = :artist, year = :year WHERE id = :id RETURNING id');
         $query->execute(array('id' => $id, 'name' => $this->name, 'artist' => $this->artist, 'year' => $this->year));
         $row = $query->fetch();
         $this->id = $row['id'];
