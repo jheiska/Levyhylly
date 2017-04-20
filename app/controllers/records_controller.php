@@ -58,18 +58,18 @@ class RecordController extends BaseController {
             'year' => $params['year']
         );
 
-         Kint::dump($params);
+     
         
-//        $record = new Record($attributes);
-//        $errors = $record->errors();
-//
-//        if (count($errors) > 0) {
-//            View::make('record/record_edit.html', array('errors' => $errors, 'attributes' => $attributes));
-//        } else {
-//            $record->update();            
-//            Redirect::to('/record/' . $record->id, array('message' => 'Record information updated.'));
-//                       
-//        }
+        $record = new Record($attributes);
+        $errors = $record->errors();
+
+        if (count($errors) > 0) {
+            View::make('record/record_edit.html', array('errors' => $errors, 'attributes' => $attributes));
+        } else {
+            $record->update();            
+            Redirect::to('/record/' . $record->id, array('message' => 'Record information updated.'));
+                       
+        }
     }
     
     public static function record_destroy($id){

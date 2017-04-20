@@ -50,6 +50,8 @@ class Record extends BaseModel {
         $query = DB::connection()->prepare('INSERT INTO Record (name, artist, year) VALUES (:name, :artist, :year) RETURNING id');
         $query->execute(array('name' => $this->name, 'artist' => $this->artist, 'year' => $this->year));
         $row = $query->fetch();
+        
+        Kint::dump($row);
         $this->id = $row['id'];
     }
 
