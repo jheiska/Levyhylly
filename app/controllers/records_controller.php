@@ -28,7 +28,7 @@ class RecordController extends BaseController {
         }
     }
 
-    public static function add() {
+    public static function record_add() {
         View::make('record/add.html');
     }
 

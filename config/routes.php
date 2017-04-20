@@ -28,8 +28,8 @@ $routes->get('/record', function() {
     RecordController::index();
 });
 
-$routes->post('/record/add', function(){
-  RecordController::add();
+$routes->get('/record/add', function(){
+  RecordController::record_add();
 });
 
 //$routes->get('/record/add', function(){
