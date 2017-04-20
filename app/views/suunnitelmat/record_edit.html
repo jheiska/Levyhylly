@@ -2,7 +2,7 @@
 {% block content %}
   <h1>Edit record information</h1>
 
-  <form>
+  <form method="post" action="{{base_path}}/record/edit_save">
     <div class="checkbox">
       <label>
         <input type="checkbox">
@@ -11,16 +11,16 @@
     </div>
     <div class="form-group">
       <label>Name</label>
-      <input type="text" class="form-control" value="Nightfall in Middle-Earth">
+      <input type="text" class="form-control" value={{attributes.name}}>
     </div>
     <div class="form-group">
       <label>Artist</label>
-      <input type="text" class="form-control" value="Blind Guardian">
+      <input type="text" class="form-control" value={{attributes.artist}}>
     </div>
       
     <div class="form-group">
       <label>Year published</label>
-      <input type="text" class="form-control" value="1998">
+      <input type="text" class="form-control" value={{attributes.year}}>
     </div>
         <div class="form-group">
       <label>Keskeneräinen muokkausnäkymä</label>

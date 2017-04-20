@@ -38,7 +38,7 @@ class BaseModel {
 
     public function validate_year() {
         $errors = array();
-        if (strlen($this->year) != 4) {
+        if (strlen($this->year) != 4 || !is_numeric($this->year)) {
             $errors[] = 'Julkaisuvuoden tulee olla muotoa YYYY (esim. 1998)!';
         }
         return $errors;
