@@ -1,6 +1,5 @@
 <?php
 
-
 class HelloWorldController extends BaseController {
 
     public static function index() {
@@ -16,6 +15,15 @@ class HelloWorldController extends BaseController {
         Kint::dump($nightfall);
     }
 
-    
+//    public static function sandbox() {
+//        $rec = new record(array(
+//            'name' => '',
+//            'artist' => 'BG',
+//            'year' => '2018'            
+//        ));
+//        $errors = $rec->errors();
+//
+//        Kint::dump($errors);
+//    }
 
 }
