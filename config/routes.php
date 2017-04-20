@@ -8,20 +8,20 @@ $routes->get('/hiekkalaatikko', function() {
     HelloWorldController::sandbox();
 });
 
-$routes->get('/record_view', function() {
-    RecordController::record_view();
+$routes->get('/record_view', function($id) {
+    RecordController::record_view($id);
 });
 
-$routes->get('/record_edit', function() {
-    RecordController::record_edit();
+$routes->get('/record_edit', function($id) {
+    RecordController::record_edit($id);
 });
 
 $routes->get('/record_list', function() {
     RecordController::record_list();
 });
 
-$routes->get('/record_find', function() {
-    RecordController::record_find();
+$routes->get('/record_find', function($id) {
+    RecordController::record_find($id);
 });
 
 $routes->get('/record', function() {
