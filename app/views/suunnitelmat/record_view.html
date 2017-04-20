@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>{{attributes[1].name}}</h1>
+<h1>{{attributes[0].name}}</h1>
 
 <p>
     <button class="btn btn-danger">Remove</button> <a href="../levyhylly/record_edit" class="btn btn-default">Edit</a>
 </p>
 
 <ul>
-    <li><strong>Artist:</strong> {{attributes[1].artist}}</li>
-    <li><strong>Year published:</strong> {{attributes[1].year}}</li>    
+    <li><strong>Artist:</strong> {{attributes[0].artist}}</li>
+    <li><strong>Year published:</strong> {{attributes[0].year}}</li>    
     <li><strong>In collection?:</strong> <label class="label label-danger">Yes</label></li>       
 </ul>
 
